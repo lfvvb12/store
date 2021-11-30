@@ -1,0 +1,177 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>R'P Store</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+ </head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/store3.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="team.html">Team</a></li>
+						    	<li><a href="shop.html">Men</a></li>
+						    	<li><a href="shopM.html">Women</a></li>
+						    	<li><a href="boys.html">Boys</a></li>
+						    	<li><a href="girls.html">Girls</a></li>
+								<li><a href="contact.html">Contact</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<!----search-scripts---->
+						<ul class="icon1 sub-icon1 profile_img">
+							<li><a class="active-icon c1" href="#"> </a>
+							   <ul class="sub-icon1 list">
+								  <div class="clear"></div>
+								 <li class="list_img"><img src="images/toro.png" alt=""/></li>
+								 <div class="login_buttons">
+									<div class="check_button"><a href="checkout.html">Verificar</a></div>
+									<div class="login_button"><a href="login.html">Iniciar</a></div>
+									<div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+				  <div class="map">
+					<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.7420246087067!2d-99.05510088582622!3d19.38031984737399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fd0614558e4b%3A0x3760847a107a0b9f!2sInstituto%20Tecnol%C3%B3gico%20de%20Iztapalapa!5e0!3m2!1ses-419!2smx!4v1637718885865!5m2!1ses-419!2smx&amp;output=embed"></iframe><br><small><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.7420246087067!2d-99.05510088582622!3d19.38031984737399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fd0614558e4b%3A0x3760847a107a0b9f!2sInstituto%20Tecnol%C3%B3gico%20de%20Iztapalapa!5e0!3m2!1ses-419!2smx!4v1637718885865!5m2!1ses-419!2smx" style="color:#666;text-align:left;font-size:12px"></a></small>
+				  </div>
+				</div>
+				<div class="col-md-5">
+					<div class="address">
+						   		<p>Canal de Tezontle 1512, Dr Alfonso Ortiz Tirado, Iztapalapa, 09020 Ciudad de México, CDMX</p>
+						   		<p>MEX</p>
+				   		<p>Phone:(00) 00 00 00 00 00</p>
+				   		<p>Fax: (000) 000 00 00 0</p>
+				 	 	<p>Email: <span>rico_pollo@hotmail.com</span></p>
+				   </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 contact">
+				  <form method="post" action="contact-post.html">
+					<div class="to">
+                     	<input type="text" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
+					 	<input type="text" class="text" value="Correo" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Correo';}">
+					 	<input type="text" class="text" value="Tema" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tema';}">
+					</div>
+					<div class="text">
+	                   <textarea value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje:</textarea>
+	                   <div class="form-submit">
+			           <input name="submit" type="submit" id="submit" value="Enviar"><br>
+			           </div>
+	                </div>
+	                <div class="clear"></div>
+                   </form>
+			     </div>
+		    </div>
+	     </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Productos</h4>
+						<li><a href="shop.html">Hombres</a></li>
+						<li><a href="shopM.html">Mujeres</a></li>
+						<li><a href="boys.html">Niños</a></li>
+						<li><a href="girls.html">Niñas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Acerca de </h4>
+						<li><a href="team.html">Equipo</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Atención al Cliente</h4>
+						<li><a href="contact.html">Contactanos</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Redes Sociales</h4>
+						<ul class="social">	
+						  
+						  <li class="facebook"><a href="https://www.facebook.com/TecNMCampusIztapalapa"><span> </span></a></li>
+						  <li class="twitter"><a href="https://twitter.com/JesusMe75437657?t=IUeWDb1w9OluBEnX4aRMGw&s=09"><span> </span></a></li>
+						  <li class="instagram"><a href="https://instagram.com/erick1sthe_best?utm_medium=copy_link"><span> </span></a></li>	
+																			  
+						</ul>
+						   
+					</ul>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+				   <p>© 2021 Template by Equipo Rico Pollo</p>
+
+		</div>
+	</div>
+</body>	
+</html>

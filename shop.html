@@ -1,0 +1,291 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>R'P Store</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/store3.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="team.html">Team</a></li>
+						    	<li><a href="shop.html">Men</a></li>
+						    	<li><a href="shopM.html">Women</a></li>
+						    	<li><a href="boys.html">Boys</a></li>
+						    	<li><a href="girls.html">Girls</a></li>
+								<li><a href="contact.html">Contact</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+
+					<ul class="icon1 sub-icon1 profile_img">
+						<li><a class="active-icon c1" href="#"> </a>
+						   <ul class="sub-icon1 list">
+							  <div class="clear"></div>
+							 <li class="list_img"><img src="images/toro.png" alt=""/></li>
+							 <div class="login_buttons">
+								<div class="check_button"><a href="checkout.html">Verificar</a></div>
+									<div class="login_button"><a href="login.html">Iniciar</a></div>
+								<div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row shop_box-top">
+				<div class="col-md-3 shop_box"><a href="shop1.html">
+					<img src="images/shop3.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Oferta!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Tenis HOVR Machina Camo</a></h3>
+						<p> Under Armour </p>
+						<span class="reducedfrom">$3,799.00</span>
+						<span class="actual">$3,039.00 MXN</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				<div class="col-md-3 shop_box"><a href="shop2.html">
+					<img src="images/shop1.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Playera Own The Run</a></h3>
+						<p> Adidas </p>
+						<span class="actual">$699.00 MXN </span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				<div class="col-md-3 shop_box"><a href="shop3.html">
+					<img src="images/shop4.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Oferta!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Mochila Scuderia Ferrari</a></h3>
+						<p> Puma </p>
+						<span class="reducedfrom">$1,499.00 </span>
+						<span class="actual">$899.40 MXN</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				<div class="col-md-3 shop_box"><a href="shop4.html">
+					<img src="images/shop2.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Gorra Fitness Snapback</a></h3>
+						<p> Adidas </p>
+						<span class="actual">$499.00 MXN </span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 shop_box"><a href="shop5.html">
+					<img src="images/shop5.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Tenis Renew Ride 2</a></h3>
+						<p> Nike </p>
+						<span class="actual">$1,699.00 MXN </span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				<div class="col-md-3 shop_box"><a href="shop6.html">
+					<img src="images/shop6.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Oferta!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Tenis Softride Enzo </a></h3>
+						<p> Puma </p>
+						<span class="actual">$1,899.00 MXN </span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				<div class="col-md-3 shop_box"><a href="shop7.html">
+					<img src="images/shop7.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Tapete Yoga 3mm</a></h3>
+						<p> Wilson </p>
+						<span class="reducedfrom">$329.00</span>
+						<span class="actual">$263.20 MXN</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				<div class="col-md-3 shop_box"><a href="shop8.html">
+					<img src="images/shop8.png" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">Nuevo</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Oferta!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="#">Short Favorite Woven</a></h3>
+						<p> Puma </p>
+						<span class="reducedfrom">$799.00</span>
+						<span class="actual">$639.20 MXN</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Agregar al Carrito</a></li>
+							
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+			</div>
+		 </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Productos</h4>
+						<li><a href="shop.html">Hombres</a></li>
+						<li><a href="shopM.html">Mujeres</a></li>
+						<li><a href="boys.html">Niños</a></li>
+						<li><a href="girls.html">Niñas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Acerca de </h4>
+						<li><a href="team.html">Equipo</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Atención al Cliente</h4>
+						<li><a href="contact.html">Contactanos</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Redes Sociales</h4>
+						<ul class="social">	
+						  
+						  <li class="facebook"><a href="https://www.facebook.com/TecNMCampusIztapalapa"><span> </span></a></li>
+						  <li class="twitter"><a href="https://twitter.com/JesusMe75437657?t=IUeWDb1w9OluBEnX4aRMGw&s=09"><span> </span></a></li>
+						  <li class="instagram"><a href="https://instagram.com/erick1sthe_best?utm_medium=copy_link"><span> </span></a></li>	
+																			  
+						</ul>
+						   
+					</ul>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+				   <p>© 2021 Template by Equipo Rico Pollo</p>
+
+		</div>
+	</div>
+</body>	
+</html>
